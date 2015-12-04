@@ -27,7 +27,8 @@ module.exports = function(grunt) {
       hashType: 'folder',
       srcBasePath: '',
       destBasePath: '',
-      references: []
+      references: [],
+      deleteOriginal: false
     });
 
     var assetFileMapping = {},
@@ -126,6 +127,13 @@ module.exports = function(grunt) {
         grunt.file.copy(sourceMapPath, destSourceMapPath);
         sourceFileMapping[relativeSourceMapPath] = relativeDestSourceMapPath;
         grunt.log.writeln('Copied source map: ' + destSourceMapPath);
+      }
+
+      // remove the unversioned file
+      // effectively renaming the source file rather than copying
+      if (options.deleteOriginal) {
+          grunt.file.delete(assetPath);
+          grunt.log.writeln('Deleted original source: ' + assetPath);
       }
 
       if (Object.keys(assetFileMapping).length === numSourceFiles) {

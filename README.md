@@ -33,7 +33,8 @@ grunt.initConfig({
       srcBasePath: '',            // The directory prefix to be stripped from the asset map src paths.
       destBasePath: '',           // The directory prefix to be stripped from the asset map dest paths.
       hashType: 'folder',         // Defaults to `/$HASH/filename.ext`, but `'file'` will output `filename.$HASH.ext`.
-      references: []              // Files to replace references in (eg. a CSS file where `image.png` should become `image.$HASH.png`)
+      references: [],             // Files to replace references in (eg. a CSS file where `image.png` should become `image.$HASH.png`)
+      deleteOriginal: false       // Delete the source file after copying it to a versioned filename (eg. effectively rename it)
     },
     your_target: {
       files: [
@@ -50,6 +51,7 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+ * 2015-12-04   v0.1.7   Add a parameter to delete unversioned original files after versioning
  * 2014-08-19   v0.1.6   Add a reference option to replace file paths (eg. in CSS) with hashed versions
  * 2014-07-29   v0.1.5   Make asset map generation optional.
  * 2014-07-29   v0.1.4   Allow hashing in filenames rather than folder names
