@@ -2,22 +2,22 @@
   "name": "grunt-asset-hash",
   "description": "Create a folder of asset files that include hashes",
   "version": "0.1.6",
-  "homepage": "https://github.com/rich-nguyen/grunt-asset-hash",
+  "homepage": "https://github.com/mattandrews/grunt-asset-hash",
   "author": {
     "name": "Richard Nguyen",
     "email": "richard.nguyen@guardian.co.uk"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rich-nguyen/grunt-asset-hash.git"
+    "url": "git://github.com/mattandrews/grunt-asset-hash.git"
   },
   "bugs": {
-    "url": "https://github.com/rich-nguyen/grunt-asset-hash/issues"
+    "url": "https://github.com/mattandrews/grunt-asset-hash/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/rich-nguyen/grunt-asset-hash/blob/master/LICENSE-MIT"
+      "url": "https://github.com/mattandrews/grunt-asset-hash/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
